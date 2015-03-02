@@ -1,0 +1,9 @@
+{
+    "albums":[
+        {"target": "#/works/Folsoms", "imgsrc": "/images/albums/folsoms.jpg", "title": "Folsom Family", "description": "2015 Winter"},
+        {"target": "#/works/Howards", "imgsrc": "/images/albums/howards.jpg", "title": "Howard Family", "description": "2014 Fall"},
+        {"target": "#/works/Hochsteins", "imgsrc": "/images/albums/hochsteins.jpg", "title": "Hochstein Family", "description": "2014 Winter"},
+        {"target": "#/works/Cye", "imgsrc": "/images/albums/cyeholly.jpg", "title": "Cye + Holly", "description": "2014 Fall"},
+        {"target": "#/works/Senestraros", "imgsrc": "/images/albums/senestraros.jpg", "title": "Senestraro Siblings", "description": "2014 Winter"}
+    ]
+}

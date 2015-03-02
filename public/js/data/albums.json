@@ -1,0 +1,117 @@
+{
+    "folsoms":{
+        
+        "title": "FOLSOM FAMILY",
+        
+        "images":[
+            {"src": "/images/albums/Folsoms/pic-10.jpg"},
+            {"src": "/images/albums/Folsoms/pic-14.jpg"},
+            {"src": "/images/albums/Folsoms/pic-1.jpg"},
+            {"src": "/images/albums/Folsoms/pic-5.jpg"},
+            {"src": "/images/albums/Folsoms/pic-9.jpg"},
+            {"src": "/images/albums/Folsoms/pic-3.jpg"},
+            {"src": "/images/albums/Folsoms/pic-11.jpg"},
+            {"src": "/images/albums/Folsoms/pic-2.jpg"},
+            {"src": "/images/albums/Folsoms/pic-4.jpg"},
+            {"src": "/images/albums/Folsoms/pic-13.jpg"},
+            {"src": "/images/albums/Folsoms/pic-8.jpg"},
+            {"src": "/images/albums/Folsoms/pic-7.jpg"},
+            {"src": "/images/albums/Folsoms/pic-12.jpg"},
+            {"src": "/images/albums/Folsoms/pic-16.jpg"},
+            {"src": "/images/albums/Folsoms/pic-15.jpg"},
+            {"src": "/images/albums/Folsoms/pic-17.jpg"},
+            {"src": "/images/albums/Folsoms/pic-18.jpg"},
+            {"src": "/images/albums/Folsoms/pic-19.jpg"},
+            {"src": "/images/albums/Folsoms/pic-20.jpg"},
+            {"src": "/images/albums/Folsoms/pic-21.jpg"},
+            {"src": "/images/albums/Folsoms/pic-22.jpg"},
+            {"src": "/images/albums/Folsoms/pic-23.jpg"},
+            {"src": "/images/albums/Folsoms/pic-6.jpg"}
+        ]
+    },
+    "howards":{
+     "title":"THE HOWARDS",
+        
+        "images":[
+            {"src": "/images/albums/Howards/pic-10.jpg"},
+            {"src": "/images/albums/Howards/pic-14.jpg"},
+            {"src": "/images/albums/Howards/pic-1.jpg"},
+            {"src": "/images/albums/Howards/pic-5.jpg"},
+            {"src": "/images/albums/Howards/pic-9.jpg"},
+            {"src": "/images/albums/Howards/pic-3.jpg"},
+            {"src": "/images/albums/Howards/pic-11.jpg"},
+            {"src": "/images/albums/Howards/pic-2.jpg"},
+            {"src": "/images/albums/Howards/pic-4.jpg"},
+            {"src": "/images/albums/Howards/pic-13.jpg"},
+            {"src": "/images/albums/Howards/pic-8.jpg"},
+            {"src": "/images/albums/Howards/pic-7.jpg"},
+            {"src": "/images/albums/Howards/pic-12.jpg"},
+            {"src": "/images/albums/Howards/pic-13.jpg"},
+            {"src": "/images/albums/Howards/pic-14.jpg"},
+            {"src": "/images/albums/Howards/pic-15.jpg"},
+            {"src": "/images/albums/Howards/pic-16.jpg"},
+            {"src": "/images/albums/Howards/pic-17.jpg"},
+            {"src": "/images/albums/Howards/pic-18.jpg"},
+            {"src": "/images/albums/Howards/pic-6.jpg"}
+        ]
+    },
+    "hochsteins":{
+        "title": "THE HOCHSTEIN FAMILY",
+        
+        "images": [
+            {"src": "/images/albums/Hochsteins/pic-1.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-2.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-3.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-4.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-5.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-6.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-7.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-8.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-9.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-10.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-11.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-12.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-13.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-14.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-15.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-16.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-17.jpg"},
+            {"src": "/images/albums/Hochsteins/pic-18.jpg"}
+        ]
+    },
+    
+    "senestraros":{
+        "title": "THE SENESTRAROS",
+        
+        "images":[
+            {"src": "/images/albums/Senestraros/pic-1.jpg"},
+            {"src": "/images/albums/Senestraros/pic-2.jpg"},
+            {"src": "/images/albums/Senestraros/pic-3.jpg"},
+            {"src": "/images/albums/Senestraros/pic-4.jpg"},
+            {"src": "/images/albums/Senestraros/pic-5.jpg"},
+            {"src": "/images/albums/Senestraros/pic-6.jpg"},
+            {"src": "/images/albums/Senestraros/pic-7.jpg"},
+            {"src": "/images/albums/Senestraros/pic-8.jpg"},
+            {"src": "/images/albums/Senestraros/pic-9.jpg"},
+            {"src": "/images/albums/Senestraros/pic-10.jpg"},
+            {"src": "/images/albums/Senestraros/pic-11.jpg"},
+            {"src": "/images/albums/Senestraros/pic-12.jpg"},
+            {"src": "/images/albums/Senestraros/pic-13.jpg"},
+            {"src": "/images/albums/Senestraros/pic-14.jpg"},
+            {"src": "/images/albums/Senestraros/pic-15.jpg"}
+        ]
+    },
+    "cye": {
+        "title": "CYE + HOLLY",
+        
+        "images":[
+            {"src": "/images/albums/Cye/pic-1.jpg"},
+            {"src": "/images/albums/Cye/pic-2.jpg"},
+            {"src": "/images/albums/Cye/pic-3.jpg"},
+            {"src": "/images/albums/Cye/pic-4.jpg"},
+            {"src": "/images/albums/Cye/pic-5.jpg"},
+            {"src": "/images/albums/Cye/pic-6.jpg"},
+            {"src": "/images/albums/Cye/pic-7.jpg"}
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+<section id="blog" class="type-one" ng-controller="blogController">
+	<div class="section-page blank">
+    	
+    	<h1>BLOG</h1>
+        {{iframes}}
+        <div ng-repeat="$iframe in iframes">
+        <iframe ng-src="{{$iframe.target}}" 
+                style="width:100%;height:600px;margin-bottom:5px;border:solid 1px #ccc;border-radius:2px;"></iframe>  
+            
+        </div>
+    </div>
+</section>

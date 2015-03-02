@@ -1,0 +1,14 @@
+<section id="home" class="type-one" ng-controller="showcaseController">
+    <!-- Gallery -->
+    <div class="galleria">
+
+        <img ng-repeat="$img in showcases" 
+             ng-src="{{$img.src}}" 
+             data-title="{{$img.title}}"
+             alt="{{$img.title}}" 
+             data-description="{{$img.description}}" 
+             data-link="{{$img.link}}"/>
+        
+    </div>
+    <!-- Gallery End -->
+</section>
