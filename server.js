@@ -12,7 +12,7 @@ var port = 3000;
 
 app.engine('html', require('ejs').renderFile);
 
-mongoose.connect('mongodb://localhost:27017/mean-demo');
+//mongoose.connect('mongodb://localhost:27017/mean-demo');
 
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use(express.static(path.join(__dirname, 'public')));
