@@ -8,7 +8,7 @@ var express =       require('express'),
     //expressSession = require('express-session')
     path    =       require('path');;
 
-var port = 3000;
+var port = Number(process.env.PORT || 3000);
 
 //mongoose.connect('mongodb://localhost:27017/mean-demo');
 
