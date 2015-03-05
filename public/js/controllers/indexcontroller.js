@@ -2,6 +2,6 @@
 app.controller('indexcontroller', [
     '$scope',
     function indexcontroller($scope){
-        return;
+        $(window).trigger('home-loaded');
     }
 ]);

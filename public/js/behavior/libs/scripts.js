@@ -196,8 +196,9 @@ $(document).ready(function($) {
 
 	
 	/*-- SLIDESHOW --*/
+    var getGalleria;
     $(window).on('home-loaded', function(e){
-	var getGalleria = $(".galleria");
+	 getGalleria = getGalleria || $(".galleria");
         
         if( getGalleria.length ==! 0 ) {
 
