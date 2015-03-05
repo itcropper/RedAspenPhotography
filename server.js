@@ -1,16 +1,14 @@
 var express =       require('express'),
     app =           express(),
-    bodyParser =    require('body-parser'),
-    mongoose =      require('mongoose'),
+    //bodyParser =    require('body-parser'),
+    //mongoose =      require('mongoose'),
 //    passport = require('./server/passport'),
 //    passportLocal = require('passport-local'),
 //    cookieParser = require('cookie-parser'),
-    expressSession = require('express-session')
+    //expressSession = require('express-session')
     path    =       require('path');;
 
 var port = 3000;
-
-app.engine('html', require('ejs').renderFile);
 
 //mongoose.connect('mongodb://localhost:27017/mean-demo');
 
