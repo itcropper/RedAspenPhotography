@@ -1675,3 +1675,12 @@ a.link:hover{
 	bottom: 0;
 	background-color: #b72325;
 }
+
+.full-screen-video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-size:cover;
+}

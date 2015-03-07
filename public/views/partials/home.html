@@ -1,13 +1,16 @@
 <section id="home" class="type-one" ng-controller="showcaseController">
     <!-- Gallery -->
+    
+    <!--
+    <video autoplay loop muted poster='rain.jpg' class="full-screen-video" id='bgvid'>
+        <source src="/images/global/rain.mp4" type="video/mp4" />
+    </video>
+        -->
+    
     <div class="galleria">
 
         <img ng-repeat="$img in showcases" 
-             ng-src="{{$img.src}}" 
-             data-title="{{$img.title}}"
-             alt="{{$img.title}}" 
-             data-description="{{$img.description}}" 
-             data-link="{{$img.link}}"/>
+             ng-src="{{$img.src}}"/>
         
     </div>
     <!-- Gallery End -->

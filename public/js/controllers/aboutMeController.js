@@ -8,17 +8,20 @@ app.controller('aboutmeController', [
                 $scope.testimonials = res.data.testimonials;
               
                 setTimeout(function(){
-                    var owl2 = $("#owl-testimonials");
-                    owl2.owlCarousel({
+
+                    var owlDefault = $(".testimonial-list");
+
+                    owlDefault.owlCarousel({
                       items : 1,
                       itemsDesktop : [1400,1],
                       itemsDesktopSmall : [1100,1],
                       itemsTablet: [600,1],
                       itemsMobile : [400,1],
                       pagination : true,
-                      navigation : false
+                      navigation : false,
+                      navigationText: false
                     });
-                }, 0);
+                }, 10);
           });
     }
 ]);

@@ -100,26 +100,7 @@ $(document).ready(function($) {
 	});
 	/*-- TEAM CAROUSEL END --*/
 	
-	/*-- TESTIMONIALS CAROUSEL --*/
-    $(window).one('about-me-loaded', function(e){
 
-            });
-	/*-- TESTIMONIALS CAROUSEL END --*/
-	
-	/*-- DEFAULT CAROUSEL --*/
-	var owlDefault = $(".owl-gallery");
-    
-	owlDefault.owlCarousel({
-	  items : 1,
-	  itemsDesktop : [1400,1],
-	  itemsDesktopSmall : [1100,1],
-	  itemsTablet: [600,1],
-	  itemsMobile : [400,1],
-	  pagination : true,
-	  navigation : false,
-	  navigationText: false
-	});
-	/*-- DEFAULT CAROUSEL END --*/
 	
 	/*-- MASONRY --*/
 	var siteMasonry = function() {
@@ -195,27 +176,6 @@ $(document).ready(function($) {
 	
 
 	
-	/*-- SLIDESHOW --*/
-    var getGalleria;
-    $(window).on('home-loaded', function(e){
-	 getGalleria = getGalleria || $(".galleria");
-        
-        if( getGalleria.length ==! 0 ) {
-
-            Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
-            Galleria.run('.galleria', {
-                imageCrop: true,
-                transition: 'fade',
-                autoplay: 7000,
-                idleMode:false,
-                showInfo: true,
-                _toggleInfo: false,
-                height: windowHeight
-            })
-        }
-    });
-	/*-- SLIDESHOW END --*/
-	
 	/*-- WINDOW SCROLL --*/
 	$(window).scroll(function () {
 		backTop();
@@ -224,7 +184,7 @@ $(document).ready(function($) {
 	
 	/*-- WINDOW LOAD --*/
 	$(window).load(function() {
-		$(".site-loader").delay(100).fadeOut("slow");
+		$(".site-loader").delay(500).fadeOut("slow");
 		siteMenu();
 		siteMasonry();
 		backTop();
