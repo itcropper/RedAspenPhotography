@@ -1684,3 +1684,14 @@ a.link:hover{
     height: auto;
     background-size:cover;
 }
+
+@media (min-width: 1200px){
+    #header.site-header .header-top .header-menu,
+    #header.site-header .header-top .header-logo {
+        margin-left:2em;
+        float:none ;
+    }
+    #header.site-header .header-top .header-menu > ul > li {
+        float:none ;
+    }
+}

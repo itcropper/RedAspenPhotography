@@ -9,14 +9,17 @@ app.controller('showcaseController', [
         $(window).on('resize', function(e) {
             controller.windowHeight = $(window).height();
         });
-        console.log('calling load page');
-        $http.get('/js/data/showCase.json').then(function(res){
-            console.log('loading home page');
-            console.log(res.data);
-            $scope.showcases = res.data; 
 
-            controller.setGallery();
+        $http.get('/js/data/showCase.json').then(function(res){
             
+            $scope.showcases = res.data; 
+            
+            console.log($scope.showcases.map(function(s) {return s.src;}));
+            
+            $scope.load = function(){
+                controller.setGallery();
+            }
+            $scope.load();
       });
         
       controller.setGallery = function(e) {
