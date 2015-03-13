@@ -1,7 +1,7 @@
 var express =       require('express'),
     app =           express(),
     bodyParser =    require('body-parser'),
-    //mongoose =      require('mongoose'),
+    mongoose =      require('mongoose'),
 //    passport = require('./server/passport'),
 //    passportLocal = require('passport-local'),
 //    cookieParser = require('cookie-parser'),
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 var port = Number(process.env.PORT || 3000);
 
-//mongoose.connect('mongodb://localhost:27017/mean-demo');
+//mongoose.connect('mongodb://localhost:27017/');
 
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use(express.static(path.join(__dirname, 'public')));
