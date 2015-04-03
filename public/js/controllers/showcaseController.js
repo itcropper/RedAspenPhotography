@@ -17,20 +17,19 @@ app.controller('showcaseController', [
             
             for(i = 0; i < res.data.length; i++){
                 
-                image = new Image(res.data[i].src);
-                if(i === 0){
-                    document.hideLoader();
-                }else{
-                    console.log(res.data[i].src);
+                image = new Image();
+                image.src = res.data[i].src;
+                //console.log(i, image, res.data[i].src);
+                if(i === res.data.length - 1){
+                    image.onload = function(){
+                        $scope.showcases = res.data; 
+                        controller.setGallery();
+                    };
                 }
             }
             
-            $scope.showcases = res.data; 
             
-            $scope.load = function(){
-                controller.setGallery();
-            }
-            $scope.load();
+            
             
             //preload and cache the works images:
             $http.get('/js/data/works.json').then(function(res){
@@ -53,7 +52,9 @@ app.controller('showcaseController', [
                     showInfo: true,
                     _toggleInfo: false,
                     height: controller.windowHeight
-                });
+                }, function(){
+                        document.hideLoader();
+                    });
             }
       }
     }
