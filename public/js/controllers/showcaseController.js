@@ -11,15 +11,34 @@ app.controller('showcaseController', [
         });
 
         $http.get('/js/data/showCase.json').then(function(res){
+
+            var i = 0,
+                image = {};
+            
+            for(i = 0; i < res.data.length; i++){
+                
+                image = new Image(res.data[i].src);
+                if(i === 0){
+                    document.hideLoader();
+                }else{
+                    console.log(res.data[i].src);
+                }
+            }
             
             $scope.showcases = res.data; 
-            
-            console.log($scope.showcases.map(function(s) {return s.src;}));
             
             $scope.load = function(){
                 controller.setGallery();
             }
             $scope.load();
+            
+            //preload and cache the works images:
+            $http.get('/js/data/works.json').then(function(res){
+
+                for(i = 0; i < res.data.albums.length; i++){
+                    image = new Image(res.data.albums[i].imgsrc);   
+                }
+            });
       });
         
       controller.setGallery = function(e) {

@@ -184,11 +184,19 @@ $(document).ready(function($) {
 	
 	/*-- WINDOW LOAD --*/
 	$(window).load(function() {
+        
 		$(".site-loader").delay(500).fadeOut("slow");
 		siteMenu();
 		siteMasonry();
 		backTop();
 	});
+    
+    document.hideLoader = function(){
+		$(".site-loader").delay(500).fadeOut("slow");
+		siteMenu();
+		siteMasonry();
+		backTop();
+    }
     
     $(window).on('album-loaded', function(e){
         $(".site-loader").delay(100).fadeOut("slow");
