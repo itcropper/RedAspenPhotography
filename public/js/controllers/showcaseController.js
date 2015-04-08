@@ -11,33 +11,15 @@ app.controller('showcaseController', [
         });
 
         $http.get('/js/data/showCase.json').then(function(res){
-
-            var i = 0,
-                image = {};
             
-            for(i = 0; i < res.data.length; i++){
-                
-                image = new Image();
-                image.src = res.data[i].src;
-                //console.log(i, image, res.data[i].src);
-                if(i === res.data.length - 1){
-                    image.onload = function(){
-                        $scope.showcases = res.data; 
-                        controller.setGallery();
-                    };
-                }
+            $scope.showcases = res.data; 
+            
+            console.log($scope.showcases.map(function(s) {return s.src;}));
+            
+            $scope.load = function(){
+                controller.setGallery();
             }
-            
-            
-            
-            
-            //preload and cache the works images:
-            $http.get('/js/data/works.json').then(function(res){
-
-                for(i = 0; i < res.data.albums.length; i++){
-                    image = new Image(res.data.albums[i].imgsrc);   
-                }
-            });
+            $scope.load();
       });
         
       controller.setGallery = function(e) {
@@ -52,9 +34,7 @@ app.controller('showcaseController', [
                     showInfo: true,
                     _toggleInfo: false,
                     height: controller.windowHeight
-                }, function(){
-                        document.hideLoader();
-                    });
+                });
             }
       }
     }
