@@ -12,31 +12,41 @@ app.controller('showcaseController', [
 
         $http.get('/js/data/showCase.json').then(function(res){
 
-            var i = 0,
-                image = {};
-            
-            for(i = 0; i < res.data.length; i++){
+                var images = [];
                 
-                image = new Image();
-                image.src = res.data[i].src;
-                //console.log(i, image, res.data[i].src);
-                if(i === res.data.length - 1){
-                    image.onload = function(){
-                        $scope.showcases = res.data; 
+            function loadShowcases(i){
+
+                if(i >= res.data.length){
+                    $scope.showcases = res.data;
+                    $scope.load = function(){
+                        console.log('loaded');
                         controller.setGallery();
-                    };
+                    }
+                    return;   
                 }
+                
+                images[i] = new Image();   
+                images[i].src = res.data[i].src;
+                images[i].onload = function(){loadShowcases(i + 1);};
             }
-            
+            loadShowcases(0);
             
             
             
             //preload and cache the works images:
             $http.get('/js/data/works.json').then(function(res){
-
-                for(i = 0; i < res.data.albums.length; i++){
-                    image = new Image(res.data.albums[i].imgsrc);   
+                images = [];
+                
+                function loadImages(i){
+                     
+                    if(i >= res.data.albums.length){
+                     return;   
+                    }
+                    images[i] = new Image();   
+                    images[i].src = res.data.albums[i].imgsrc;
+                    images[i].onload = function(){loadImages(i + 1);};
                 }
+                loadImages(0);
             });
       });
         
@@ -52,9 +62,7 @@ app.controller('showcaseController', [
                     showInfo: true,
                     _toggleInfo: false,
                     height: controller.windowHeight
-                }, function(){
-                        document.hideLoader();
-                    });
+                });
             }
       }
     }
