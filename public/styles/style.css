@@ -467,7 +467,7 @@ section#team-detail.type-two .member-head .member-photo:after{
 	background-color		: #e1e1e1;
 }
 .nav-pager li.active a,
-.nav-pager li.active:hover a{
+.nav-pager li.active:hover a {
 	color					: #fff;
 	background-color		: #000;
 }
@@ -1694,4 +1694,50 @@ a.link:hover{
     #header.site-header .header-top .header-menu > ul > li {
         float:none ;
     }
+}
+
+.header-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 1.5em;
+    z-index: 1;   
+    color:white;
+    opacity:.8;
+    text-align:left;
+}
+
+#main-navigation {
+    position:fixed;
+    top:0;
+    background-color:rgba(0,0,0, .2);
+    z-index:1;
+    width:100%;
+}
+#main-navigation ul {
+    display:block;
+    height:40px;
+    line-height:40px;
+    
+}
+#main-navigation ul li {
+    width:14.1%;
+    float:left;
+    text-align:center;
+}
+#main-navigation ul li a {
+    color:white;
+    -webkit-transition:text-shadow 1s, color 1s, -webkit-transform 1s;
+    transition:text-shadow 1s, color 1s, transform 1s;
+}
+#main-navigation ul li a:hover {
+    color:#771013;
+}
+.galleria-counter {
+    display:none !important;
+}
+.sub img {
+    width:20%;
+}
+.site-toggle {
+    display:none !important;
 }

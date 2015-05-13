@@ -634,7 +634,6 @@
 		float					: left;
 	}
 	.site-header .header-top .header-menu{
-		width					: 202px;
 		float					: left;
 		position				: relative;
 	}
@@ -643,10 +642,7 @@
 		position				: relative;
 	}
 	.site-header .header-top .header-menu > ul > li > a{
-		display					: block;
-		width					: 100px;
-		height					: 100px;
-		line-height				: 100px;
+
 		text-align				: center;
 		white-space				: nowrap;
 		text-overflow			: ellipsis;
