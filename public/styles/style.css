@@ -1700,7 +1700,7 @@ a.link:hover{
     position: fixed;
     bottom: 0;
     left: 1.5em;
-    z-index: 1;   
+    z-index: 5;   
     color:white;
     opacity:.8;
     text-align:left;
@@ -1710,13 +1710,13 @@ a.link:hover{
     position:fixed;
     top:0;
     background-color:rgba(0,0,0, .2);
-    z-index:1;
+    z-index:5;
     width:100%;
 }
 #main-navigation ul {
     display:block;
     height:40px;
-    line-height:40px;
+    line-height:52px;
     
 }
 #main-navigation ul li {
