@@ -1,9 +1,11 @@
 {
     "albums":[
-        {"target": "#/works/Folsoms", "imgsrc": "/images/albums/folsoms.jpg", "title": "Folsom Family", "description": "2015 Winter"},
-        {"target": "#/works/Howards", "imgsrc": "/images/albums/howards.jpg", "title": "Howard Family", "description": "2014 Fall"},
-        {"target": "#/works/Hochsteins", "imgsrc": "/images/albums/hochsteins.jpg", "title": "Hochstein Family", "description": "2014 Winter"},
-        {"target": "#/works/Cye", "imgsrc": "/images/albums/cyeholly.jpg", "title": "Cye + Holly", "description": "2014 Fall"},
-        {"target": "#/works/Senestraros", "imgsrc": "/images/albums/senestraros.jpg", "title": "Senestraro Siblings", "description": "2014 Winter"}
+        {"target": "#/works/couples", "imgsrc": "/images/albums/couples.jpg", "title": "Couples", "description": ""},
+        {"target": "#/works/portraits", "imgsrc": "/images/albums/portraits.jpg", "title": "Portraits", "description": ""},
+        {"target": "#/works/families", "imgsrc": "/images/albums/families.jpg", "title": "Families", "description": ""},
+        {"target": "#/works/littleones", "imgsrc": "/images/albums/littleones.jpg", "title": "Little Ones", "description": ""},
+        {"target": "#/works/maternity", "imgsrc": "/images/albums/maternity.jpg", "title": "Maternity", "description": ""},
+        {"target": "#/works/businesses", "imgsrc": "/images/albums/businesses.jpg", "title": "Businesses", "description": ""},
+        {"target": "#/works/travel", "imgsrc": "/images/albums/travel.jpg", "title": "Travel", "description": ""}
     ]
 }

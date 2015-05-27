@@ -43,8 +43,7 @@ body{
 	background-position		: 0 0;
 	background-attachment	: fixed;
 	background-repeat		: no-repeat;
-	background-color		: #000000;
-	background-image		: url("/images/global/site-background.jpg");
+	background-color		: #fff;
 }
 a,
 a:hover{
@@ -312,10 +311,10 @@ section#team-detail.type-two .member-head .member-photo:after{
 	height					: 100%;
 	z-index					: 9999;
 	text-align				: center;
-	background-color		: #484848;
+	background-color		: #fff;
 }
 .site-loader img{
-	width					: 16px;
+	width					: 40px;
 	position				: absolute;
 	left					: 50%;
 	top						: 50%;
@@ -1364,7 +1363,7 @@ section{
 }
 section .section-page{
 	padding					: 60px 40px 40px 40px;
-	margin					: 40px;
+	margin					: 60px;
 	min-height				: 100%;
 	background-color		: #fff;
 }
@@ -1701,7 +1700,7 @@ a.link:hover{
     bottom: 0;
     left: 1.5em;
     z-index: 5;   
-    color:white;
+    color:black;
     opacity:.8;
     text-align:left;
 }
