@@ -14,23 +14,25 @@ app.controller('showcaseController', [
             
             $scope.showcases = res.data; 
 
-      });
+        });
+        
+        app.directive('slider',  ['$rootScope', function($rootScope) {
+
+              if( $(".galleria").length !== 0 ) {
+                  Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
+                  Galleria.run('.galleria', {
+                        imageCrop: true,
+                        transition: 'fade',
+                        autoplay: 5000,
+                        idleMode:false,
+                        showInfo: true,
+                        _toggleInfo: false,
+                        height: controller.windowHeight
+                    });
+            }
+        }]);
     }
+    
+
 ]);
 
-app.directive('slider',  ['$rootScope', function($rootScope) {
-    
-    console.log('getting here and succeeding!');
-      if( $(".galleria").length !== 0 ) {
-          Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
-          Galleria.run('.galleria', {
-                imageCrop: true,
-                transition: 'fade',
-                autoplay: 5000,
-                idleMode:false,
-                showInfo: true,
-                _toggleInfo: false,
-                height: controller.windowHeight
-            });
-    }
-}]);
