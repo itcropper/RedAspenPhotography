@@ -13,29 +13,24 @@ app.controller('showcaseController', [
         $http.get('/js/data/showCase.json').then(function(res){
             
             $scope.showcases = res.data; 
-            
-            console.log($scope.showcases.map(function(s) {return s.src;}));
-            
-            $scope.load = function(){
-                controller.setGallery();
-            }
-            $scope.load();
+
       });
-        
-      controller.setGallery = function(e) {
-          
-          if( $(".galleria").length !== 0 ) {
-              Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
-              Galleria.run('.galleria', {
-                    imageCrop: true,
-                    transition: 'fade',
-                    autoplay: 5000,
-                    idleMode:false,
-                    showInfo: true,
-                    _toggleInfo: false,
-                    height: controller.windowHeight
-                });
-            }
-      }
     }
 ]);
+
+app.directive('slider',  ['$rootScope', function($rootScope) {
+    
+    console.log('getting here and succeeding!');
+      if( $(".galleria").length !== 0 ) {
+          Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
+          Galleria.run('.galleria', {
+                imageCrop: true,
+                transition: 'fade',
+                autoplay: 5000,
+                idleMode:false,
+                showInfo: true,
+                _toggleInfo: false,
+                height: controller.windowHeight
+            });
+    }
+}]);
