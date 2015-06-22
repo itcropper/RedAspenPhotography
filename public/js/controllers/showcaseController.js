@@ -17,9 +17,9 @@ app.controller('showcaseController', [
             $scope.showcases = res.data; 
             
             var timeInterval = 100,
-                numberOfChecks = 100,
+                numberOfChecks = 0,
                 galleryInterval = setInterval(function(){
-                    if($ && numberOfChecks++  > 0){
+                    if($ && numberOfChecks++  > 100){
                         clearInterval(galleryInterval);
                     }else if($ && $('.galleria').length > 0) {
                         Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
