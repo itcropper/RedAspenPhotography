@@ -16,25 +16,25 @@ app.controller('showcaseController', [
             
             $scope.showcases = res.data; 
             
-            var timeInterval = 100,
-                numberOfChecks = 0,
-                galleryInterval = setInterval(function(){
-                    if($ && numberOfChecks++  > 100){
-                        clearInterval(galleryInterval);
-                    }else if($ && $('.galleria').length > 0) {
-                        Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
-                        Galleria.run('.galleria', {
-                            imageCrop: true,
-                            transition: 'fade',
-                            autoplay: 5000,
-                            idleMode:false,
-                            showInfo: true,
-                            _toggleInfo: false,
-                            height: windowDimensions.height
-                        });
-                        clearInterval(galleryInterval);
-                    }
-            }, timeInterval);
+//            var timeInterval = 100,
+//                numberOfChecks = 0,
+//                galleryInterval = setInterval(function(){
+//                    if($ && numberOfChecks++  > 100){
+//                        clearInterval(galleryInterval);
+//                    }else if($ && $('.galleria').length > 0) {
+//                        Galleria.loadTheme('/js/behavior/libs/galleria.classic.js');
+//                        Galleria.run('.galleria', {
+//                            imageCrop: true,
+//                            transition: 'fade',
+//                            autoplay: 5000,
+//                            idleMode:false,
+//                            showInfo: true,
+//                            _toggleInfo: false,
+//                            height: windowDimensions.height
+//                        });
+//                        clearInterval(galleryInterval);
+//                    }
+//            }, timeInterval);
 
         });
     }

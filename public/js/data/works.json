@@ -1,5 +1,6 @@
 {
     "albums":[
+        {"target": "#/works/weddings", "imgsrc": "/images/albums/weddings.jpg", "title": "Weddings", "description": ""},
         {"target": "#/works/couples", "imgsrc": "/images/albums/couples.jpg", "title": "Couples", "description": ""},
         {"target": "#/works/portraits", "imgsrc": "/images/albums/portraits.jpg", "title": "Portraits", "description": ""},
         {"target": "#/works/families", "imgsrc": "/images/albums/families.jpg", "title": "Families", "description": ""},

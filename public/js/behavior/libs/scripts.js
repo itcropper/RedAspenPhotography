@@ -86,6 +86,7 @@ $(document).ready(function($) {
 		}
 	};
 	/*-- HEADER TOGGLE END--*/
+    
 	
 	/*-- TEAM CAROUSEL --*/
 	var owl1 = $("#owl-team");
@@ -99,6 +100,8 @@ $(document).ready(function($) {
 	  navigation : false
 	});
 	/*-- TEAM CAROUSEL END --*/
+    
+    /* -- Responsive Nav --*/
 	
 
 	
