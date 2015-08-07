@@ -16,6 +16,7 @@ app.controller('showcaseController', [
             
             $scope.showcases = res.data; 
             
+            
 //            var timeInterval = 100,
 //                numberOfChecks = 0,
 //                galleryInterval = setInterval(function(){
