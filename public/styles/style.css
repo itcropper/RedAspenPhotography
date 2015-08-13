@@ -89,7 +89,6 @@ h6, .h6{
 	font-size				: 10px;
 }
 ul{
-	list-style-type			: none;
 	margin					: 0;
 	padding					: 0;
 }
@@ -1842,10 +1841,18 @@ a.link:hover{
 ng-view section.ng-scope {
     position: relative;
 }
-<<<<<<< HEAD
 
 .about-me-img {
     width:100%;
 }
-=======
->>>>>>> 52fc78bd9777f834c85f28441da0865422e950e6
+
+#about ul li {
+    margin-left:2em;
+    margin-bottom:1em;
+}
+
+.work-list .item {
+    width:80%;
+    margin:0 auto;
+    margin-bottom:2em;
+}
