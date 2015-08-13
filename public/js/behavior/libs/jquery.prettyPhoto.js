@@ -508,7 +508,8 @@
 			
 			// Resize picture the holder
 			$pp_pic_holder.animate({
-				'top': projectedTop,
+				'top': 10,
+                'position': 'fixed',
 				'left': ((windowWidth/2) - (pp_dimensions['containerWidth']/2) < 0) ? 0 : (windowWidth/2) - (pp_dimensions['containerWidth']/2),
 				width:pp_dimensions['containerWidth']
 			},settings.animation_speed,function(){
@@ -684,7 +685,9 @@
 					return;
 
 				$pp_pic_holder.css({
-					'top': projectedTop,
+					'top': 10,
+                    'position': 'fixed',
+                    'max-height': !!(windowHeight * .9),
 					'left': (windowWidth/2) + scroll_pos['scrollLeft'] - (contentwidth/2)
 				});
 			};

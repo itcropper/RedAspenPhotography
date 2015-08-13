@@ -103,8 +103,10 @@ $(document).ready(function($) {
     
     /* -- Responsive Nav --*/
     var time = 0;
-    
     var interval = setInterval(function(){
+        if(time += 100 > 10000){
+            clearInterval(interval);   
+        }
         if(time += 100 > 10000 || document.getElementsByClassName("nav-collapse").length){
             clearInterval(interval);
             var navigation = responsiveNav(".nav-collapse", {
@@ -123,41 +125,27 @@ $(document).ready(function($) {
                 close: function(){}               // Function: Close callback
               });
         }
+        
     }, 100);
 	
 
-	
-	/*-- MASONRY --*/
-	var siteMasonry = function() {
-		if ( windowWidth > 991 ) {
-			var getMasonry = $(".masonry-list");
-			getMasonry.imagesLoaded(function () {
-				getMasonry.masonry({
-					itemSelector: ".item",
-					columnWidth: ".grid-sizer",
-					isAnimated: true
-				});
-			});
-		} 
-		else {
-			$(".masonry-list").masonry('destroy');
-		}
-	};
-	/*-- MASONRY END --*/
-	
-	/*-- FIT VIDEO --*/
-	$(".video-full").fitVids();
-	/*-- FIT VIDEO END --*/
-	
-    $(window).on('album-loaded', function(e){
-        /*-- PRETTY PHOTO --*/
-        $("a[data-rel^='prettyPhoto']").prettyPhoto({
-            theme: "light_square",
-            social_tools: false,
-            deeplinking:false
-        });
-    });
-	/*-- PRETTY PHOTO END --*/
+    /*-- MASONRY --*/
+    var siteMasonry = function() {
+        if ( windowWidth > 991 ) {
+            var getMasonry = $(".masonry-list");
+            getMasonry.imagesLoaded(function () {
+                getMasonry.masonry({
+                    itemSelector: ".item",
+                    columnWidth: ".grid-sizer",
+                    isAnimated: true
+                });
+            });
+        } 
+        else {
+            $(".masonry-list").masonry('destroy');
+        }
+    };
+    /*-- MASONRY END --*/
 	
 	/*-- SCROLL COMMENT FORM --*/
 	$(".leave-new").click(function(e){
@@ -227,6 +215,14 @@ $(document).ready(function($) {
         $(".site-loader").delay(100).fadeOut("slow");
 		siteMenu();
 		siteMasonry();
+        $("a[rel^='prettyPhoto']").prettyPhoto({
+            theme: "light_square",
+            social_tools: false,
+            deeplinking:false,
+            default_width: 500,
+			default_height: 344,   
+            allow_resize: true
+        });
 		backTop();
     });
 	/*-- WINDOW LOAD END --*/

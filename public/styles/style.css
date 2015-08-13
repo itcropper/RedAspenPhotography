@@ -1856,3 +1856,18 @@ ng-view section.ng-scope {
     margin:0 auto;
     margin-bottom:2em;
 }
+
+
+.galleria {
+    width:75%;
+    height:auto;
+    margin:0 auto;
+}
+
+.galleria-theme-classic .galleria-image-nav {
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    left: 17%;
+    right: initial;
+}
