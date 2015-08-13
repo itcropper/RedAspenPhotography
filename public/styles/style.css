@@ -1779,3 +1779,7 @@ a.link:hover{
 ng-view section.ng-scope {
     position: relative;
 }
+
+.about-me-img {
+    width:100%;
+}
