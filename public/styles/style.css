@@ -1864,10 +1864,16 @@ ng-view section.ng-scope {
     margin:0 auto;
 }
 
+@media screen and (max-width: 40em) {
+    .galleria-theme-classic .galleria-image-nav {
+        display:none;   
+    }
+}
+
 .galleria-theme-classic .galleria-image-nav {
     height: 30px;
     position: absolute;
     top: 25px;
-    left: 17%;
+    left: 180px;
     right: initial;
 }
