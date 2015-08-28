@@ -1,0 +1,34 @@
+<style>
+    .pricing {border-bottom:1px solid #771013;}
+</style>
+<section id="pricing-package" class="type-three" ng-controller="pricingController">
+    
+    <h1 class="type">{{data.heading}}</h1>
+    
+    <p class='sub sub-heading'>{{data.subHeading}}</p>
+    
+    <div class="row">
+        <div class="col-md-4" ng-repeat="$img in data.images">
+            <div class="item">
+                        <img src="{{$img}}" />
+                </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        
+        <div class="col-md-4" ng-repeat="detail in data.details" >
+            
+            <p class="heading">{{detail.caption}}</p>
+            <p class="sub-heading">{{detail.base}}</p>
+            
+            <p class="detail" ng-repeat="include in detail.includes">
+                {{include}}
+            </p>
+        
+        </div>
+    
+    </div>
+    
+
+</section>

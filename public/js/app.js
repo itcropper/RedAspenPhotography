@@ -8,6 +8,7 @@ app.config(function($routeProvider){
         .when('/about',   {templateUrl: '/views/partials/about.html', controller: 'aboutmeController'})
         .when('/blog',    {templateUrl: '/views/partials/blog.html'})
         .when('/pricing', {templateUrl: '/views/partials/pricing.html', controller: 'pricingController'})
+        .when('/pricing/:type', {templateUrl: '/views/partials/pricingPackage.html', controller: 'pricingPackageController'})
         .when('/works',   {templateUrl: '/views/partials/works.html', controller: 'worksController'})
         .when('/works/:name', {templateUrl: '/views/partials/singleAlbum.html', controller: 'singleAlbumController'})
         .when('/contact', {templateUrl: '/views/partials/contact.html'})
