@@ -1,7 +1,7 @@
 var express =       require('express'),
     app =           express(),
     bodyParser =    require('body-parser'),
-    mongoose =      require('mongoose'),
+//    mongoose =      require('mongoose'),
 //    passport = require('./server/passport'),
 //    passportLocal = require('passport-local'),
 //    cookieParser = require('cookie-parser'),

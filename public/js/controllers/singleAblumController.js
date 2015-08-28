@@ -29,9 +29,18 @@ app.controller('singleAlbumController', [
             $scope.images = shuffle($scope.images);
             $scope.title = res.data[$routeParams.name.toLowerCase()].title;
             
-            setTimeout(function(e){
-                $(window).trigger('album-loaded');
-                $('.site-loader').hide();
+            var counter = 0;
+            var interval = setInterval(function(e){
+                if(counter += 100 > 10000){
+                    clearInterval(interval);   
+                    return;
+                }
+                if($('.site-loader').length){
+                    clearInterval(interval);
+                    $(window).trigger('album-loaded');
+                    $('.site-loader').hide();
+                }
+
             }, 1000);
         });
     }
