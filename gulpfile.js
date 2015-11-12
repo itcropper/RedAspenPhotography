@@ -9,5 +9,5 @@ gulp.task('default', function () {
       width : 800,
       upscale : false
     }))
-    .pipe(gulp.dest(__dirname + '/content/images/med-large'));
+    .pipe(gulp.dest(__dirname + '/content/images/med'));
 });

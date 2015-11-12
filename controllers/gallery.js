@@ -6,6 +6,7 @@ exports.get = function(albumKey, cb){
         .findOne({key: albumKey})
         .exec(function(err, res){
             if(!err){ 
+                res.title = res.title.toUpperCase();
                 cb(res); 
             }else{
                 console.log("ERROR", err);
