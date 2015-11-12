@@ -15,7 +15,7 @@
     "gulp-image-resize": "^0.7.1",
     "handlebars": "^4.0.4",
     "less": "^2.5.3",
-    "mongoose": "^3.8.24",
+    "mongoose": "^4.1.10",
     "node-mailer": "^0.1.1",
     "nodemailer": "^0.7.1",
     "path": "^0.11.14",
