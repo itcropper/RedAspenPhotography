@@ -1,0 +1,26 @@
+<style>
+    .gallery {border-bottom:1px solid #771013;}
+</style>
+<section id="works" class="type-two" >
+	<div class="section-page blank">
+
+        <div class="work-list type-two">
+
+            {{#each images}}
+            <div class="item">
+                <div class="over-image over-zoom">
+                    <img src="{{this.imgsrc}}" alt="Gallery Title">
+                    <a href="{{this.target}}" class="block">
+                    <div class="over-content">
+                        <div class="align-hvcenter">
+                            <h4>{{this.title}}</h4>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section>

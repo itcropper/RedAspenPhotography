@@ -1,0 +1,18 @@
+<style>
+    .gallery {border-bottom:1px solid #771013;}
+</style>
+<section id="works-detail" class="type-one">
+	<div class="section-page blank">
+        
+        <div class="work-gallery type-one masonry-list">
+            <h2 class="text-border">{{title}}</h2>
+        </div>
+
+        <div class="fotorama" data-nav="thumbs">
+        {{#each images}}
+            <img src="{{this.src}}">
+        {{/each}}
+        </div>
+    </div>
+</section>
+

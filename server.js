@@ -1,40 +1,93 @@
 var express =       require('express'),
     app =           express(),
     bodyParser =    require('body-parser'),
-//    mongoose =      require('mongoose'),
-//    passport = require('./server/passport'),
-//    passportLocal = require('passport-local'),
-//    cookieParser = require('cookie-parser'),
-    //expressSession = require('express-session')
-    contact = require('./server/routeActions/contact'),
-    path    =       require('path');
-
-var jsonParser = bodyParser.json()
-
-app.set('view engine', 'ejs');
-
-var port = Number(process.env.PORT || 3000);
-
-//mongoose.connect('mongodb://localhost:27017/');
-
-app.use('/js', express.static(__dirname + '/public/js'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-
-
-//partials
-app.get('/partials/:name', function (req, res) {
-  var name = req.params.name;
-  res.render('views/partials/' + name);
-});
+    mongoose =      require('mongoose'),
+    contact =       require('./server/routeActions/contact'),
+    path    =       require('path'),
+    exphbs = require('express-handlebars'),
+    data = require('./data/Media'),
+    albums = require('./controllers/albums'),
+    gallery = require('./controllers/gallery'),
+    pricings = require('./controllers/pricings');
     
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/views/index.html');
+
+var jsonParser = bodyParser.json();
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.use('/styles', express.static(__dirname + '/content/styles'));
+app.use('/scripts', express.static(__dirname + '/content/scripts'));
+app.use('/images', express.static(__dirname + '/content/images'));
+app.use('/fonts', express.static(__dirname + '/content/fonts'));
+
+
+var PORT = process.env.PORT || 3000;
+var MONGOOSE_PORT =
+  process.env.MONGOLAB_URI || 
+  process.env.MONGOHQ_URL  || 
+  'mongodb://localhost:27017;'; 
+
+mongoose.connect(MONGOOSE_PORT, function (err, res) {
+  if (err) { 
+    console.log ('ERROR connecting to: ' + MONGOOSE_PORT + '. ' + err);
+  } else {
+    console.log ('Succeeded connected to: ' + MONGOOSE_PORT);
+  }
+});
+ 
+app.get('/', function(req, res){
+    data.showcase_images(function(result){
+        res.render('home', result);
+    });
+});
+
+app.get('/about', function(req, res){
+        res.render('about');
+});
+
+app.get('/contact', function(req, res){
+        res.render('contact');
+});
+
+app.get('/pricing', function(req, res){
+    pricings.getAll(function(result){
+        res.render('pricing', {pricings: result});
+    });
+});
+
+app.get('/pricing/:genre', function(req, res){
+    pricings.getOne(req.params.genre, function(result){
+        res.render('pricing-package', result);
+    });
+});
+
+//app.get('/pricingJson/:genre', function(req, res){
+//    pricings.getOne(req.params.genre, function(result){
+//        res.json(result);
+//    });
+//});
+
+app.get('/gallery', function(req, res){
+    
+    albums.getAll(function(result){
+        var images = result.map(function(e){
+            e.imgsrc = "/images" + e.imgsrc;
+            return e;
+        });
+        res.render('works', {images: images});
+    });
+});
+
+app.get('/gallery/:album', function(req, res){
+    gallery.get(req.params.album, function(result){
+        res.render('album', result);
+    });
 });
 
 app.post('/contact', jsonParser, contact.email);
 
 
-app.listen(port, function() {
-    console.log('Listening on Port ' + port);
+app.listen(PORT, function() {
+    console.log('Listening on Port ' + PORT);
 });

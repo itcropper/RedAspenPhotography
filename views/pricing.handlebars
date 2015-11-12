@@ -1,0 +1,28 @@
+<style>
+    .pricing {border-bottom:1px solid #771013;}
+</style>
+<section id="pricing" class="type-three" ng-controller="pricingController">
+    
+    <div class="pricing-top clearfix">
+        
+        
+        <h1>Pricing</h1>
+        <div class="row">
+            {{#each pricings}}
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="./{{this.target}}" class="block">
+                        <img alt="Portrait Pricing" src="{{this.imgsrc}}">
+
+                                <h3>{{this.title}}</h3>
+
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div> 
+
+
+    </div>
+
+</section>

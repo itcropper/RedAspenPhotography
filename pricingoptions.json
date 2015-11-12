@@ -1,0 +1,127 @@
+[
+    {
+        "heading": "PORTRAITS",
+        "imgsrc": "/images/albums/families/27.jpg",
+        "title": "portraits",
+        "target": "portraits",
+        "summary": "",
+        "drillDownImages": [
+            "/images/albums/families/27.jpg",
+            "/images/albums/portraits/13.jpg",
+            "/images/albums/portraits/29.jpg"
+        ],
+        "selections": [
+            {
+                "name": "FULL SHOOT",
+                "price": "$250",
+                "length": "2 hours",
+                "details": [
+                    "Up to two locations",
+                    "Access to library of professionally edited images for imediate downloading and sharing.",
+                    "Two hours is recomended to allow for enough time to capture these important moments. ",
+                    "With up to two locations and unlimited wardrobe changes, it allows for a relaxed and fun shoot.",
+                    "If things run a litle longer than two hours then so be it; we must be having a good time."
+                ]
+            },
+            {
+                "name": "SMALL SHOOT",
+                "price": "$150",
+                "length": "1 hour",
+                "details": [
+                    "One location",
+                    "Access to library of professionally edited images for immediate downloading and sharing.",
+                    "Two hours is recomended to allow for enough time to capture these important moments.",
+                    "With up to two locations and unlimited wardrobe changes, it allows for a relaxed and fun shoot.",
+                    "If things run a litle longer than two hours then so be it; we must be having a good time."
+                ]
+            },
+            {
+                "name": "CUSTOM",
+                "price": "--",
+                "length": "",
+                "details": [
+                    "Need something specific?",
+                    "I would love you work with you.",
+                    "Reach out to me and we can work out something that fits what you're looking for."
+                ]
+            }
+        ],
+        "subDetails": []
+    },
+    {
+        "heading": "WEDDINGS",
+        "imgsrc": "/images/albums/weddings/3.jpg",
+        "title": "Weddings",
+        "target": "weddings",
+        "summary": "Your wedding day will happen so quickly! All the details, arrangements, and countless hours put into your special day will pass as you are celebrating with the love of your life. Red Aspen Photography will capture your day with authentic, timeless and sincere images to let you feel those emotions for a lifetime.",
+        "drillDownImages": [
+            "/images/albums/weddings/12.jpg",
+            "/images/albums/weddings/1.jpg",
+            "/images/albums/wedding-details/2.jpg"
+        ],
+        "selections": [
+            {
+                "name": "",
+                "price": "",
+                "length": "",
+                "details": []
+            },
+            {
+                "name": "Wedding packages start at",
+                "price": "$1,600",
+                "length": "1 hour",
+                "details": [
+                    "Base packages start with:",
+                    "6 hours of wedding day coverage",
+                    "1 hour engagement session",
+                    "Professionally edited images",
+                    "Digital Images delivered in an online gallery to share with family and friends immediately",
+                    "Personal Use Print Release (you are able to print your images at your chosen location and convenience)"
+                ]
+            },
+            {
+                "name": "",
+                "price": "",
+                "length": "",
+                "details": []
+            }
+        ],
+        "subDetails": []
+    },
+    {
+        "heading": "BUSINESS",
+        "imgsrc": "/images/albums/businesses/1.jpg",
+        "title": "Business",
+        "target": "business",
+        "summary": "",
+        "drillDownImages": [
+            "/images/albums/businesses/1.jpg",
+            "/images/albums/businesses/5.jpg",
+            "/images/albums/businesses/11.jpg"
+        ],
+        "selections": [
+            {
+                "name": "",
+                "price": "",
+                "length": "",
+                "details": [
+                    "Business shoots vary by the requirements.",
+                    "Reach out to me and we can arrange something that gets you the best shots possible to showcase your business and what you're aiming for."
+                ]
+            },
+            {
+                "name": "",
+                "price": "",
+                "length": "",
+                "details": []
+            },
+            {
+                "name": "",
+                "price": "",
+                "length": "",
+                "details": []
+            }
+        ],
+        "subDetails": []
+    }
+]

@@ -1,0 +1,44 @@
+<style>
+    .pricing {border-bottom:1px solid #771013;}
+</style>
+<section id="pricing-package" class="type-three" >
+
+    
+    <h1 class="type">{{heading}}</h1>
+    
+    <p class='sub sub-heading'>{{summary}}</p>
+    
+    <div class="row">
+        {{#each drillDownImages}}
+        <div class="col-md-4">
+            <div class="item">
+                        <img src="{{this}}" />
+                </div>
+        </div>
+        {{/each}}
+    </div>
+    
+    
+    <div class="row">
+        
+        {{#each selections}}
+        <div class="col-md-4">
+            <p class="h2 center">{{this.name}}</p>
+            <p class="sub-heading center">{{this.price}}</p>
+            <p class="detail center">{{this.length}}</p>
+            
+            {{#each this.details}}
+                <p class="detail center">{{this}}</p>
+             {{/each}}
+        </div>
+        {{/each}}
+       
+    
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><p class="detail center"> {{{subDetails}}} </p></div>
+    </div>
+    
+
+</section>
