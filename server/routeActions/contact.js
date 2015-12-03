@@ -4,7 +4,6 @@ var nodemailer = require('nodemailer'),
 
 var transporter = nodemailer.createTransport('SMTP', {
     service: 'Gmail',
-    debug: true,
     auth: {
         user: process.env.email,
         pass: process.env.password
@@ -13,12 +12,7 @@ var transporter = nodemailer.createTransport('SMTP', {
 
 
 exports.email = function (req, res) {
-    // create reusable transporter object using SMTP transport
-
-    // NB! No need to recreate the transporter object. You can use
-    // the same transporter object for all e-mails
-
-    // setup e-mail data with unicode symbols
+    console.log(req.body.name, req.body.email, req.body.message);
     var mailOptions = {
         from: req.body.name, // sender address
         to: process.env.email, // list of receivers
@@ -27,8 +21,8 @@ exports.email = function (req, res) {
         html: '' // html body
     };
 
-    // send mail with defined transport object
     transporter.sendMail(mailOptions, function(error, info){
+        console.log('error', error, 'info', info);
         if(error){
             res.end('Sorry, something went wrong and can\'t get your message. Try copying my email address into your email client.');
         }else{
