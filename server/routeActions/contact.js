@@ -15,7 +15,6 @@ var transporter = nodemailer.createTransport('SMTP', {
 exports.email = function (req, res) {
     // create reusable transporter object using SMTP transport
 
-
     // NB! No need to recreate the transporter object. You can use
     // the same transporter object for all e-mails
 

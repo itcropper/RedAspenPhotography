@@ -71,7 +71,7 @@ app.get('/pricing/:genre', function(req, res){
 app.get('/gallery', function(req, res){
     
     albums.getAll(function(result){
-        var images = result.map(function(e){
+        var images = result.map(function(e){ 
             e.imgsrc = "/images" + e.imgsrc;
             return e;
         });

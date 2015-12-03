@@ -28,6 +28,7 @@ gulp.task('js-concat', function(){
                 "content/scripts/Module.js",
                 "content/scripts/global.js",
                 "content/scripts/home.js",
+                "content/scripts/Contact.js",
                 "content/scripts/gallery.js"
         ])
         .pipe(gp_concat('concat.js'))
