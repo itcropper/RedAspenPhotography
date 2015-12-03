@@ -1617,6 +1617,10 @@ Home.Extend(Module);
             timeout:5000
         });
         
+        if(Galleria){
+            Galleria.loadTheme('../dist/behavior/libs/galleria.classic.js');
+        }
+        
         return this;
     }
 })();
