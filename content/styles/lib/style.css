@@ -364,7 +364,7 @@ section#team-detail.type-two .member-head .member-photo:after{
 }
 .text-border:after{
 	display					: inline-block;
-	width					: 30px;
+	width					: 15%;
 	height					: 2px;
 	content					: "";
 	position				: absolute;
@@ -1631,7 +1631,6 @@ a.link:hover{
     margin-top: 5%;
 }
 #main-navigation {
-    background-color: rgba(255, 255, 255, 1);
     width: 100%;
 }
 
@@ -1821,6 +1820,8 @@ ng-view section.ng-scope {
     width: 100%;
 }
 
+
+
 #pricing .overlay {
     height:100%;
     width:100%;
@@ -1844,9 +1845,7 @@ ng-view section.ng-scope {
 #pricing-package .row {
     margin-bottom:5em;
 }
-#pricing-package h1.type {
-    border-bottom: 1px solid black;
-}
+
 
 #pricing-package  .sub-heading {
     font-size: 20px;

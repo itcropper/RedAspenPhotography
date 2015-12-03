@@ -38,7 +38,7 @@ var interval = setInterval(function(){
 
 
 $.fn.await = function(maxTime, $el, fn){
-    var counter = new Date((new Date()).add(maxTime));
+    var counter = new Date(new Date().getTime() + maxTime);
     var interval = setInterval(function(){
         if(new Date().getTime() > counter.getTime()){
             clearInterval(interval);
@@ -48,5 +48,74 @@ $.fn.await = function(maxTime, $el, fn){
             fn($($el));
         }
     }, 1000);
-}
+};
 	
+(function(){
+    var menuResize = function() {
+        if ( window.innerWidth > 1199 ) {
+
+            // Remove Mobile Menu Events
+            $(".header-menu *").unbind();
+
+            // Actions Desktop
+            $(".header-menu .sub").hoverIntent({
+                timeout: 100, // milliseconds delay before onMouseOut
+                over: function(){
+                    $(this).addClass("active");
+                    $(this).children("ul").slideDown("fast");
+                }, 
+                out: function(){
+                    $(this).removeClass("active");
+                    $(this).children("ul").slideUp("fast");
+                }
+            });
+        }
+        else {
+
+            // Remove Desktop Menu Events
+            $(".header-menu *").unbind();
+
+            // Actions Mobile
+            $(".header-menu .sub > a").click(function(e){
+                e.preventDefault();
+
+                $(".header-menu li ul").slideUp("normal");
+                $(".header-menu li").removeClass("active");
+
+                var element = $(this).siblings("ul");
+
+                if ( element.is(":visible") ) {
+                    element.slideUp("normal");
+                    $(this).parent().removeClass("active");
+                }
+                else {
+                    element.slideDown("normal");
+                    $(this).parent().addClass("active");
+                }
+            });
+        }
+    };
+    menuResize();
+    $(window).on('resize', menuResize);
+})();
+
+$(".site-toggle").click(function(e){
+    e.preventDefault();
+
+    var menu = $(".site-header");
+    var button = $(".site-toggle");
+
+    if( $(menu).is(":visible") ) {
+        $(menu).animate({ "left": "-200px" }, 200, function(){
+            $(menu).hide();
+            $("body").removeClass("sidebar-on");
+        });
+        $(button).animate({ "left": "0px" }, 200);
+    }
+    else {
+        $("body").addClass("sidebar-on");
+        $(menu).show();
+        $(menu).animate({"left": "0px"}, {duration: 200, queue: false});
+        $(button).animate({"left": "200px"}, {duration: 200, queue: false});
+    }
+});
