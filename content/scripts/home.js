@@ -17,7 +17,7 @@ Home.Extend(Module);
         });
         
         if(Galleria){
-            Galleria.loadTheme('../dist/behavior/libs/galleria.classic.js');
+            Galleria.loadTheme('./scripts/behavior/libs/galleria.classic.js');
         }
         
         return this;
