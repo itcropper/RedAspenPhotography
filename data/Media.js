@@ -9,7 +9,6 @@ exports.showcase_images = function(callback){
             src: "https://s3-us-west-2.amazonaws.com/red-aspen-photography/showcase/showcase_" + i + ".jpg"
         });
     }
-    console.log(list);
     callback({images: list});
 }
 

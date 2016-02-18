@@ -1,7 +1,6 @@
 
 body{
 	font-size				: 14px;
-	font-family				: 'Open Sans', sans-serif;
 	color					: #000;
 }
 a,
@@ -22,7 +21,6 @@ p {
 h1,h2,h3,h4,h5,h6{
 	padding					: 0;
 	margin					: 0;
-	font-family				: 'Dosis', sans-serif;
 	letter-spacing			: 2px;
 	font-weight				: normal;
 }
@@ -209,7 +207,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 }
 .btn{
 	padding					: 6px 15px;
-	font-family				: 'Dosis', sans-serif;
 	font-weight				: 700;
 	-webkit-border-radius	: 0px;
 	-moz-border-radius		: 0px;
@@ -413,7 +410,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	width					: 40px;
 	height					: 40px;
 	line-height				: 40px;
-	font-family				: 'Dosis', sans-serif;
 	font-weight				: 600;
 	font-size				: 12px;
 	text-align				: center;
@@ -483,7 +479,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	height					: 30px;
 	line-height				: 30px;
 	padding					: 0 15px 0 10px;
-	font-family				: 'Dosis', sans-serif;
 	font-weight				: 600;
 	font-size				: 12px;
 	color					: #fff;
@@ -793,7 +788,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	margin-bottom			: 10px;
 }
 .contact-form{
-	font-family				: 'Dosis', sans-serif;
 	font-size				: 13px;
 }
 .contact-form .data-form input[type="text"],
@@ -1099,7 +1093,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	color					: #fff;
 }
 .work-header .work-info{
-	font-family				: 'Dosis', sans-serif;
 	font-weight				: 500;
 }
 .work-header .work-info li{
@@ -1221,7 +1214,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	white-space				: nowrap;
 	text-overflow			: ellipsis;
 	overflow				: hidden;
-	font-family				: 'Dosis', sans-serif;
 	font-weight				: 500;
 	position				: relative;
 }
@@ -1241,7 +1233,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 .blog-sidebar .blog-recents ul li time{
 	margin-top				: 10px;
 	display					: block;
-	font-family				: 'Dosis', sans-serif;
 	font-size				: 12px;
 	color					: #666;
 }
@@ -1270,7 +1261,6 @@ section#team-detail.type-two .member-head .member-photo:after{
 	line-height				: 18px;
 }
 .blog-list .blog-post .post-content time{
-	font-family				: 'Dosis', sans-serif;
 	font-size				: 12px;
 	color					: #666;
 }
@@ -1852,10 +1842,8 @@ ng-view section.ng-scope {
     width:80%;
     text-align:center;
     margin:1em auto;
-    font-family: 'Dosis', sans-serif;
 }
 
 #pricing-package .detail {
-    font-family: 'Dosis', sans-serif;
     font-size:16px;
 }
