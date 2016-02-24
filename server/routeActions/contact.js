@@ -5,8 +5,8 @@ var nodemailer = require('nodemailer'),
 var transporter = nodemailer.createTransport('SMTP', {
     service: 'Gmail',
     auth: {
-        user: process.env.email || "itcropper@gmail.com",
-        pass: process.env.password || "GrestBest1"
+        user: process.env.email,
+        pass: process.env.password
     }
 });
 
@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport('SMTP', {
 exports.email = function (req, res) {
     var mailOptions = {
         from: req.body.name, // sender address
-        to: process.env.email || "itcropper@gmail.com", // list of receivers
+        to: process.env.email, // list of receivers
         subject: 'RED ASPEN PHOTOGRAPHY', // Subject line
         text: 'You have a message from: \n' + req.body.name + '\nat: \n ' + req.body.email + '\n\n' + req.body.message, // plaintext body
         html: '' // html body
