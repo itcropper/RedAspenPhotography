@@ -6,7 +6,7 @@ exports.showcase_images = function(callback){
     
     for(var i = 1; i < 13; i++){
         list.push({
-            src: "https://s3-us-west-2.amazonaws.com/red-aspen-photography/showcase/showcase_" + i + ".jpg"
+            src:"http://res.cloudinary.com/redaspenphotography/image/upload/{0}/v1456257916/showcase/showcase_"+ i +".jpg"
         });
     }
     callback({images: list});

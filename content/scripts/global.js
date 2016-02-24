@@ -36,6 +36,56 @@ var interval = setInterval(function(){
 
 }, 100);
 
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+
+$(document).ready(function(){
+    $('.load-image').each(function(e){
+        var $this = $(this),
+            src = $this.data('src'),
+            url = "",
+            $parent = $this.parent(),
+            width = $parent.width();
+        
+        var count = 0;
+        while(!width && count++ < 3){
+            $parent = $this.parent();
+            width = $parent.width();
+            console.log(count, width);
+        }
+        if(!width){
+            width = $(window).width();
+        }
+        
+        console.log('widnow', width);
+        
+        url = src.format("c_scale,w_" + width);
+        
+        if (url) {
+            var img = new Image();
+            img.style.display = "none";
+            img.onload = function() {
+                $(this).fadeIn(1000);
+            };
+            $this.replaceWith(img);
+            $(img).addClass('img');
+            img.src = url;
+        }
+                
+        
+        
+    });
+});
+
 
 $.fn.await = function(maxTime, $el, fn){
     var counter = new Date(new Date().getTime() + maxTime);
