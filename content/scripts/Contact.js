@@ -26,7 +26,8 @@ Contact.Extend(Module);
                 method: "POST",
                 contentType:"application/json; charset=utf-8",
             }).done(function(res){
-                 $form.find('textarea').val(res);
+                $('#myModal').modal();
+                $submit.attr('disabled', true);
             });
         });
         
