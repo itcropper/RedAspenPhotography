@@ -5,7 +5,7 @@ exports.get = function(albumKey, cb){
     galleryModel
         .findOne({key: albumKey})
         .exec(function(err, res){
-            if(!err){ 
+            if(!err && res){ 
                 if(res.title){
                     res.title = res.title.toUpperCase();
                 }

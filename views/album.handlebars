@@ -8,9 +8,13 @@
             <h2 class="text-border">{{title}}</h2>
         </div>
 
-        <div class="fotorama" data-nav="thumbs" data-height="75%" data-arrows="true">
+        <div class="grid">
         {{#each images}}
-            <div class="img load-image" data-src="{{this.src}}"></div>
+            <div class="grid-item">
+                <a href="javascript:void(0)">
+                    <img class="img grid-load-image" data-src="{{this.src}}"/>
+                </a>
+            </div>
         {{/each}}
         </div>
     </div>

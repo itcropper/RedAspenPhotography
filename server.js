@@ -61,7 +61,7 @@ app.get('/pricing/:genre', function(req, res){
         res.render('pricing-package', result);
     });
 });
-
+ 
 //app.get('/pricingJson/:genre', function(req, res){
 //    pricings.getOne(req.params.genre, function(result){
 //        res.json(result);
@@ -71,11 +71,8 @@ app.get('/pricing/:genre', function(req, res){
 app.get('/gallery', function(req, res){
     
     albums.getAll(function(result){
-        var images = result.map(function(e){ 
-            e.imgsrc = "/images" + e.imgsrc;
-            return e;
-        });
-        res.render('works', {images: images});
+        
+        res.render('works', {images: result});
     });
 });
 
