@@ -60,13 +60,10 @@ $(document).ready(function(){
         while(!width && count++ < 3){
             $parent = $this.parent();
             width = $parent.width();
-            console.log(count, width);
         }
         if(!width){
             width = $(window).width();
         }
-        
-        console.log('widnow', width);
         
         url = src.format("c_scale,w_" + width);
         
