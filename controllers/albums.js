@@ -4,6 +4,7 @@ exports.getAll = function(cb){
     
     albumModel
         .find()
+        .sort({sort: 1})
         .exec(function(err, res){
             if(!err){ 
                 cb(res); 
@@ -12,5 +13,4 @@ exports.getAll = function(cb){
             }
         }
     );
-    
 }
